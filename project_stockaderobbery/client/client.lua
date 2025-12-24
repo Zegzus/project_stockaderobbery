@@ -5,9 +5,6 @@
 ESX = nil
 
 local PlayerData = nil
-local converting = false
-local meltingGold = false
-local exchangingGold = false
 
 Citizen.CreateThread(function()
 	while ESX == nil do
@@ -37,7 +34,7 @@ function DrawText3Ds(x,y,z, text)
     DrawRect(_x,_y+0.0125, 0.015+ factor, 0.03, 0, 0, 0, 80)
 end
 
--- Core Thread Function
+-- Target export
 exports['qtarget']:AddBoxZone("mission", vector3(388.0397, -358.6997, 47.0195), 0.7, 0.7, {
         name="mission",
         heading=270,
@@ -54,5 +51,3 @@ exports['qtarget']:AddBoxZone("mission", vector3(388.0397, -358.6997, 47.0195), 
         },
             distance = 3
 })
-
--- Core Thread Function
